@@ -15,7 +15,10 @@ app.get('/', (req, res) => {
 
 // Routes
 const authRouter = require('./routes/authRouter');
-app.use('/api', authRouter);
+const productRouter = require('./routes/productRouter');
+
+app.use('/auth', authRouter);
+app.use('/api', productRouter);
 
 // database
 const mongoUri = process.env.MONGO_URI;

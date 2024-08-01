@@ -30,7 +30,7 @@ exports.signup = [
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 return apiResponse.validationErrorWithData(res, "Validation Error.", errors.array());
-            } else {
+            } else { 
                 // Hash password
                 const hash = await bcrypt.hash(req.body.password, 10);
 
