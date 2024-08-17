@@ -55,7 +55,7 @@ exports.signup = [
                 return apiResponse.successResponseWithData(res, "Registration Success.", userData);
             }
         } catch (err) {
-            return apiResponse.ErrorResponse(res, err);
+            return apiResponse.errorResponse(res, err);
         }
     }
 ];
@@ -89,7 +89,7 @@ exports.login = [
                 }
             }
         } catch (error) {
-            return apiResponse.ErrorResponse(res, error);
+            return apiResponse.errorResponse(res, error);
         }
     }
 ];
